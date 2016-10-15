@@ -6,7 +6,7 @@ main() {
     char voto[] = "";
     scanf("%d", &votantes);
 
-    for (int i =0; i < votantes; i++)
+    for (int i = 0; i < votantes; i++)
     {
         scanf("%s", &voto);
 
