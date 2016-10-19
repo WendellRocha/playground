@@ -1,3 +1,4 @@
-import Complex
+from Complex import Complex
+import sys
 
-Complex.main()
+sys.exit(Complex.main(*sys.argv))

@@ -1,3 +1,5 @@
+import math
+
 class Complex(object):
     def __init__(self, real, imag):
         self._real = real
@@ -27,7 +29,7 @@ class Complex(object):
         return math.atan2(self._imag, self._real)
 
     def setTheta(self, valor):
-        r = self.f
+        r = self.r
         self._real = r * math.cos(valor)
         self._imag = r * math.sin(valor)
 
@@ -46,8 +48,8 @@ class Complex(object):
         return Complex(self.real * c.real - self.imag * c.imag * c.imag,
                        self.real * c.imag + self.imag * c.real)
 
-
-    def main(self):
+    @staticmethod
+    def main(*argv):
         "Teste para o Complex"
         c = Complex(0,0)
         print c
