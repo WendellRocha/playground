@@ -7,7 +7,7 @@ header = 'De: '+ destinatario + '\n' + 'Para: ' + para + '\n' + 'Subject: subjec
 mensagem = header + '\n mensagem do corpo do email'
 '''
 
-def enviar(email, destinatario, para, mensagem):
+def enviar(destinatario, para, mensagem):
    header = 'De: ' + destinatario + '\n' + 'Para: ' + para + '\n' + 'Subject: teste \n'
    msg = header + mensagem
    usuario = 'usuario@exemple.com'
