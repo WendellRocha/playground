@@ -1,4 +1,4 @@
-import smtplimport smtplib
+import smtplib
 
 '''
 destinatario = 'exemple@exemple.com'
