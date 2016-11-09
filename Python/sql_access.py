@@ -16,3 +16,7 @@ print "Resultados de uma consulta com LIKE: \n"
 sql = """SELECT * FROM livro WHERE nome LIKE 'Harry%'"""
 cursor.execute(sql)
 print cursor.fetchall()
+
+cursor.execute("""SELECT * FROM livro""")
+for linha in cursor.fetchall():
+	print linha
