@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2016-11-12T13:37:31Z</date>
+    <date>2016-11-12T13:46:54Z</date>
     <groups>
         <group>
             <name>CMC</name>
@@ -39,7 +39,7 @@
                     <default>1</default>
                     <type>2</type>
                     <useip>1</useip>
-                    <ip>0.0.0.0</ip>
+                    <ip>192.168.1.223</ip>
                     <dns/>
                     <port>161</port>
                     <bulk>1</bulk>
