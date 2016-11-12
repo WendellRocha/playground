@@ -39,7 +39,7 @@
                     <default>1</default>
                     <type>2</type>
                     <useip>1</useip>
-                    <ip>192.168.1.223</ip>
+                    <ip>0.0.0.0</ip>
                     <dns/>
                     <port>161</port>
                     <bulk>1</bulk>
