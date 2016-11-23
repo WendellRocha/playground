@@ -1,37 +1,52 @@
 import java.util.*;
+public class QuickSort {
 
-class QuickSort {
-
-    public static void quick(int[] v, int left, int right) {
-        if (left < right) {
-            int pivot = particiona(v, left, right);
-            quick(v,left,pivot-1);
-            quick(v,pivot+1,right);
+    public static void quickSort(int[] v, int ini, int fim) {
+        if (ini < fim) {
+            int pos_pivot = particiona(v, ini, fim);
+            quickSort(v, ini, pos_pivot - 1);
+            quickSort(v, pos_pivot + 1, fim);
         }
     }
-    
-    public static int particiona(int[] v, int left, int right) {
-        int i = left;
-        int j = i + 1;
-        int pivot = v[left];
 
-        while (j < v.length) {
+    public static int particiona(int[] v, int ini, int fim) {
         
+        int pivot = v[ini];
+        int i = ini;
+
+        for (int j = ini + 1; j <= fim; j++) {
             if (v[j] < pivot) {
                 i+=1;
-                int aux = v[i];
-                v[i] = v[j];
-                v[j] = aux; 
+                swap(v, i, j);
             }
-
-            j+=1;
-        
         }
+
+        // troca pivot (v[ini]) com i.
+        swap(v, ini, i);
         
-        int aux = v[left];
-        v[left] = v[i];
-        v[i] = aux;
-        return i;
+        return i; 
+    }
+
+    public static void swap(int[] v, int i, int j) {
+        int aux = v[i];
+        v[i] = v[j];
+        v[j] = aux;
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

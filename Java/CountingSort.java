@@ -1,25 +1,27 @@
-import java.util.*;
-
 public class CountingSort {
 
-	public static int[] counting(int[] a, int menor, int k) {
+    public static int[] countingSort(int[] a, int k) {
+    
+        int[] c = new int[k];
 
-		int[] c = new int[k - menor + 1];
-		
-		for (int e : a) {
-			c[e - menor]++;
-		}
-		for (int i = 1; i < c.length; i++) {
-			c[i] += c[i - 1];
-		}
-		
-		int[] aux = new int[a.length];
-		for (int i = a.length - 1; i >= 0; i--){
-			aux[c[a[i]-menor]-1] = a[i];
-			c[a[i]-menor]--;
-		}
-		
-		return aux;
-	}
+        // frequência
+        for (int i = 0; i < a.length; i++) {
+            c[a[i] - 1] += 1;
+        }
+        
+        // cumulativa
+        for (int i = 1; i < c.length; i++) {
+            c[i] += c[i-1];
+        }
 
+        int[] b = new int[a.length];
+
+        for (int i = a.length - 1; i >= 0; i--) {
+            b[c[a[i] - 1] -1] = a[i];
+            c[a[i] - 1] -= 1;
+        }
+
+        return b;
+    
+    }
 }
