@@ -21,8 +21,3 @@ def enviar(destinatario, para, mensagem):
    server.quit()
    return True
    
- cabecalho = 'De: ' + destinatario + '\n' + 'Para: ' + para + '\n' + 'Subject: teste \n'
- mensagem = '\n hola, que tal?'
- def teste('wendell.rocha@ccc.ufcg.edu.br', 'wendellrochaa@gmail.com', mensagem):
-	enviar('wendell.rocha@ccc.ufcg.edu.br', 'wendellrochaa@gmail.com', mensagem)
-	print "done!"
