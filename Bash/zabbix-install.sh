@@ -17,13 +17,15 @@ wget https://sourceforge.net/projects/zabbix/files/ZABBIX%20Latest%20Stable/3.0.
 echo "Descompactando os arquivos fontes..."
 tar xzvf zabbix-3.0.8.tar.gz
 echo "Entrando no diretório dos arquivos fontes..."
-cd zabbix-3.0.5
+cd zabbix-3.0.8
 echo "Atualizando os pacotes..."
 apt-get update
 echo "Aplicando as atualizações..."
-apt-get upgrade
+apt-get upgrade -y
 echo "Instalando as dependências..."
-apt-get install make build-essential libopenipmi-dev snmp gpp gpp apache2 php php-mysql libapache2-mod-php php-gd libsnmp-dev libcurl4-openssl-dev vim mysql-server mysql-client libmysqld-dev libcurl-dev php-mbstring php-xml php-net-socket php-ldap php-curl
+apt-get install -y make build-essential libopenipmi-dev snmp gpp gpp apache2 php php-mysql libapache2-mod-php php-gd
+apt-get install -y libsnmp-dev libcurl4-openssl-dev vim mysql-server mysql-client libmysqld-dev
+apt-get install -y libcurl-dev php-mbstringphp-xml php-net-socket php-ldap php-curl
 echo "Antes de compilar os binários do Zabbix, é necessário criar o grupo e o usuário que o Zabbix irá utilizar"
 useradd zabbix -s /bin/false
 echo "Usuário Zabbix criado com sucesso!"
@@ -41,9 +43,9 @@ echo "Senha do usuário root do MySQL: root@3297862" > ./mysql_password.txt
 echo "Criando o banco de dados do Zabbix"
 echo "create database zabbix character set utf8;" | mysql -uroot -proot@3297862
 echo "GRANT ALL PRIVILEGES ON zabbix.* TO zabbix@localhost IDENTIFIED BY 'zabbix' WITH GRANT OPTION;" | mysql -uroot -proot@3297862
-cat zabbix-3.0.5/database/mysql/schema.sql | mysql -uroot -proot@3297862 zabbix
-cat zabbix-3.0.5/database/mysql/images.sql | mysql -uroot -proot@3297862 zabbix
-cat zabbix-3.0.5/database/mysql/data.sql | mysql -uroot -proot@3297862 zabbix
+cat zabbix-3.0.8/database/mysql/schema.sql | mysql -uroot -proot@3297862 zabbix
+cat zabbix-3.0.8/database/mysql/images.sql | mysql -uroot -proot@3297862 zabbix
+cat zabbix-3.0.8/database/mysql/data.sql | mysql -uroot -proot@3297862 zabbix
 echo "Os informações do banco de dados estão salvas no arquivo zabbix_db.txt"
 echo "db name = zabbix" > ./zabbix_db.txt
 echo "db password = zabbix" >> ./zabbix_db.txt
@@ -56,7 +58,7 @@ echo "DebugLevel=3" >> /usr/local/etc/zabbix_server.conf
 echo "PidFile=/tmp/zabbix_server.pid" >> /usr/local/etc/zabbix_server.conf
 echo "LogFile=/tmp/zabbix_server.log" >> /usr/local/etc/zabbix_server.conf
 echo "Timeout=3" >> /usr/local/etc/zabbix_server.conf
-cp zabbix-3.0.5/misc/init.d/debian/zabbix-server /etc/init.d/
+cp zabbix-3.0.8/misc/init.d/debian/zabbix-server /etc/init.d/
 update-rc.d -f zabbix-server defaults
 echo "Configurando o PHP"
 PHPFile=/etc/php/7.0/apache2/php.ini
@@ -71,7 +73,7 @@ echo ' post_max_size=16M' >> $PHPFILE;
 service apache2 restart
 echo "Instalando o fronted do Zabbix"
 mkdir /var/www/html/zabbix/
-cp -a . zabbix-3.0.5/frontends/php/ /var/www/html/zabbix/
+cp -a . zabbix-3.0.8/frontends/php/ /var/www/html/zabbix/
 chown -R www-data:www-data /var/www/html/zabbix/
 touch /var/www/html/zabbix/conf/zabbix.conf.php
 chmod 777 /var/www/html/zabbix/conf/zabbix.conf.php
