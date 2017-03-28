@@ -23,30 +23,38 @@ apt-get update
 echo "Aplicando as atualizações..."
 apt-get upgrade -y
 echo "Instalando as dependências..."
-apt-get install -y make build-essential libopenipmi-dev snmp gpp gpp apache2 php php-mysql libapache2-mod-php php-gd
-apt-get install -y libsnmp-dev libcurl4-openssl-dev vim mysql-server mysql-client libmysqld-dev
-apt-get install -y libcurl-dev php-mbstringphp-xml php-net-socket php-ldap php-curl
+apt-get install -y make build-essential libopenipmi-dev snmp gpp gpp apache2 php libapache2-mod-php php-gd fping curl
+apt-get install -y libsnmp-dev libcurl4-openssl-dev vim libssh2-1-dev libssh2-1 libcurl3-gnutls-dev
+apt-get install -y libcurl-dev php-mbstring php-xml php-net-socket php-ldap php-curl libopenipmi-dev libcurl4-gnutls-dev
+apt-get install -y python-software-properties postgresql postgresql-contrib postgresql-client libpqxx-dev php-pgsql
 echo "Antes de compilar os binários do Zabbix, é necessário criar o grupo e o usuário que o Zabbix irá utilizar"
 useradd zabbix -s /bin/false
 echo "Usuário Zabbix criado com sucesso!"
 echo "Iniciando a compilação dos binários do Zabbix"
-./configure --enable-server --enable-agent --with-mysql --with-net-snmp --with-libcurl --with-libxml2 --with-openipmi
+./configure --enable-server --enable-agent --with-postgresql --with-net-snmp --with-libcurl --with-libxml2 --with-openipmi
 make install
 echo "Agora vamos criar e configurar o banco de dados do Zabbix"
-echo "Iniciando o MySQL..."
-service mysqld start
-echo "Redefina a senha do root do MySQL"
-MYADMIN=$(which mysqladmin)
-$MYADMIN -u root password root@3297862
-echo "A nova senha de root do MySQL está salva no arquivo mysql_password.txt"
-echo "Senha do usuário root do MySQL: root@3297862" > ./mysql_password.txt
+echo "Iniciando o PostgreSQL..."
+service postgresql start
+echo "Redefina a senha do root do PostgreSQL"
+su -l postgres
+pgsql
+alter user postgres with encrypted password 'root@3297862';
+ALTER ROLE
+\q
+exit
+echo "A nova senha de root do PostgreSQL está salva no arquivo pgsql_password.txt"
+echo "Senha do usuário root do PostgreSQL: root@3297862" > ./pgsql_password.txt
 echo "Criando o banco de dados do Zabbix"
-echo "create database zabbix character set utf8;" | mysql -uroot -proot@3297862
-echo "GRANT ALL PRIVILEGES ON zabbix.* TO zabbix@localhost IDENTIFIED BY 'zabbix' WITH GRANT OPTION;" | mysql -uroot -proot@3297862
-cat zabbix-3.0.8/database/mysql/schema.sql | mysql -uroot -proot@3297862 zabbix
-cat zabbix-3.0.8/database/mysql/images.sql | mysql -uroot -proot@3297862 zabbix
-cat zabbix-3.0.8/database/mysql/data.sql | mysql -uroot -proot@3297862 zabbix
+echo "CREATE DATABASE zabbix" | psql -U postgres
+echo "GRANT ALL PRIVILEGES ON zabbix.* TO zabbix@localhost IDENTIFIED BY 'zabbix' WITH GRANT OPTION;" | psql -U postgres
+cat zabbix-3.0.8/database/postgresql/schema.sql | psql -U postgres
+cat zabbix-3.0.8/database/postgresql/images.sql | psql -U postgres
+cat zabbix-3.0.8/database/postgresql/data.sql | psql -U postgres
 echo "Os informações do banco de dados estão salvas no arquivo zabbix_db.txt"
+echo "listen_addresses = '*'" >> /etc/postgresql/9.1/main/postgresql.conf
+echo "host all all 0.0.0.0/0 md5" >> /etc/postgresql/9.1/main/pg_hba.conf
+service postgresql restart
 echo "db name = zabbix" > ./zabbix_db.txt
 echo "db password = zabbix" >> ./zabbix_db.txt
 echo "Configurando o Zabbix"
