@@ -12,8 +12,6 @@ echo "Instalação fácil do Zabbix"
 echo "Você deseja começar a instalação? [s/n]"
 read RESPOSTA
 test "$RESPOSTA" = "n" && exit
-echo "Mudando para o diretório de downloads..."
-cd Downloads
 echo "Baixando o arquivo de fontes do Zabbix Server"
 wget https://sourceforge.net/projects/zabbix/files/ZABBIX%20Latest%20Stable/3.0.8/zabbix-3.0.8.tar.gz/download
 echo "Descompactando os arquivos fontes..."
