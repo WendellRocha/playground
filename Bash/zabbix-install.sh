@@ -13,19 +13,16 @@ echo "Você deseja começar a instalação? [s/n]"
 read RESPOSTA
 test "$RESPOSTA" = "n" && exit
 echo "Baixando o arquivo de fontes do Zabbix Server"
-wget https://sourceforge.net/projects/zabbix/files/ZABBIX%20Latest%20Stable/3.0.8/zabbix-3.0.8.tar.gz/download
+wget https://sourceforge.net/projects/zabbix/files/ZABBIX%20Latest%20Stable/3.0.8/zabbix-3.0.8.tar.gz
 echo "Descompactando os arquivos fontes..."
 tar xzvf zabbix-3.0.8.tar.gz
 echo "Entrando no diretório dos arquivos fontes..."
 cd zabbix-3.0.5
 echo "Atualizando os pacotes..."
-sleep 3
 apt-get update
 echo "Aplicando as atualizações..."
-sleep 3
 apt-get upgrade
 echo "Instalando as dependências..."
-sleep 3
 apt-get install make build-essential libopenipmi-dev snmp gpp gpp apache2 php php-mysql libapache2-mod-php php-gd libsnmp-dev libcurl4-openssl-dev vim mysql-server mysql-client libmysqld-dev libcurl-dev php-mbstring php-xml php-net-socket php-ldap php-curl
 echo "Antes de compilar os binários do Zabbix, é necessário criar o grupo e o usuário que o Zabbix irá utilizar"
 useradd zabbix -s /bin/false
