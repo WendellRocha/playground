@@ -15,7 +15,7 @@ test "$RESPOSTA" = "n" && exit
 echo "Baixando o arquivo de fontes do Zabbix Server"
 wget https://sourceforge.net/projects/zabbix/files/ZABBIX%20Latest%20Stable/3.0.8/zabbix-3.0.8.tar.gz/download
 echo "Descompactando os arquivos fontes..."
-tar xzvf zabbix-3.0.5.tar.gz
+tar xzvf zabbix-3.0.8.tar.gz
 echo "Entrando no diretório dos arquivos fontes..."
 cd zabbix-3.0.5
 echo "Atualizando os pacotes..."
