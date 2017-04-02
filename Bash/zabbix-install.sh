@@ -38,11 +38,6 @@ echo "Iniciando o PostgreSQL..."
 service postgresql start
 echo "Redefina a senha do root do PostgreSQL"
 su -l postgres
-pgsql
-alter user postgres with encrypted password 'root@3297862';
-ALTER ROLE
-\q
-exit
 echo "A nova senha de root do PostgreSQL está salva no arquivo pgsql_password.txt"
 echo "Senha do usuário root do PostgreSQL: root@3297862" > ./pgsql_password.txt
 echo "Criando o banco de dados do Zabbix"
