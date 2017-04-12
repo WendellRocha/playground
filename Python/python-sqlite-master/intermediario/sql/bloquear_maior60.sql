@@ -1,1 +1,0 @@
-UPDATE clientes SET bloqueado=1 WHERE idade>60;
