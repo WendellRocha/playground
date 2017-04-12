@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp build" xmlns:build="http://schemas.microsoft.com/developer/appx/2015/build">
+  <!--
+    ESTE ARQUIVO DE PACOTE DE MANIFESTO É GERADO PELO PROCESSO DE COMPILAÇÃO.
+
+    Alterações feitas neste arquivo serão perdidas quando ele for regenerado. Para corrigir erros neste arquivo, edite o arquivo de fonte .appxmanifest.
+
+    Para obter mais informações sobre arquivos de pacote de manifesto consulte http://go.microsoft.com/fwlink/?LinkID=241727
+  -->
+  <Identity Name="c7060382-f18f-4a00-9c0d-7b1f25c1a1d2" Version="1.0.0.0" Publisher="CN=wende" ProcessorArchitecture="neutral" />
+  <mp:PhoneIdentity PhoneProductId="c7060382-f18f-4a00-9c0d-7b1f25c1a1d2" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>HelloWorldWinJS</DisplayName>
+    <PublisherDisplayName>wende</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10586.0" MaxVersionTested="10.0.15063.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="PT-BR" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="index.html">
+      <uap:VisualElements DisplayName="HelloWorldWinJS" Description="HelloWorldWinJS" BackgroundColor="transparent" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" />
+        <uap:SplashScreen Image="images\splashscreen.png" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+  <build:Metadata>
+    <build:Item Name="VisualStudio" Version="15.0" />
+    <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Community 2017" />
+    <build:Item Name="OperatingSystem" Version="10.0.15063.0 (WinBuild.160101.0800)" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="15.0.26323.1" />
+    <build:Item Name="ProjectGUID" Value="c7060382-f18f-4a00-9c0d-7b1f25c1a1d2" />
+    <build:Item Name="OptimizingToolset" Value="None" />
+    <build:Item Name="TargetRuntime" Value="AppHost" />
+    <build:Item Name="MakePri.exe" Version="10.0.15063.137 (WinBuild.160101.0800)" />
+  </build:Metadata>
+</Package>

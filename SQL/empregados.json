@@ -1,0 +1,22 @@
+[
+  {
+    "EmpregadosId": "1",
+    "Name": "Jared",
+    "Location": "Autralia"
+  },
+  {
+    "EmpregadosId": "2",
+    "Name": "Nikita",
+    "Location": "India"
+  },
+  {
+    "EmpregadosId": "3",
+    "Name": "Tom",
+    "Location": "Germany"
+  },
+  {
+    "EmpregadosId": "4",
+    "Name": "Jake",
+    "Location": "United States"
+  }
+]

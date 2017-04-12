@@ -1,0 +1,16 @@
+C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bin\Debug\ReverseMap\resources.pri
+C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bin\Debug\AppxManifest.xml
+C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bin\Debug\HelloWorldWinJS.build.appxrecipe
+C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bld\Debug\ResourceHandlingTask.state
+C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bld\Debug\priconfig.xml
+C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bld\Debug\priconfig.xml.intermediate
+C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bld\Debug\layout.resfiles
+C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bld\Debug\layout.resfiles.intermediate
+C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bld\Debug\resources.resfiles
+C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bld\Debug\resources.resfiles.intermediate
+C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bld\Debug\pri.resfiles
+C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bld\Debug\pri.resfiles.intermediate
+C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bld\Debug\qualifiers.txt
+C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bld\Debug\qualifiers.txt.intermediate
+C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bld\Debug\ProjectArchitectures.txt

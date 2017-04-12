@@ -1,0 +1,1 @@
+C:\Users\wende\Documents\GitHub\playground\C#\HelloWorld\HelloWorld\HelloWorld.csproj;x86

@@ -1,0 +1,17 @@
+[
+  {
+    "LivrosId": "1",
+    "Titulo": "C#",
+    "Preco": "115,90"
+  },
+  {
+    "LivrosId": "2",
+    "Titulo": "Introdução ao JSF 2",
+    "Preco": "129,50"
+  },
+  {
+    "LivrosId": "3",
+    "Titulo": "Android",
+    "Preco": "159,00"
+  }
+]

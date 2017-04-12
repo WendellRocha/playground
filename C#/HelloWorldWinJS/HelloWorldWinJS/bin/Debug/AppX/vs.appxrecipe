@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>WENDELL</Machine>
+    <WindowsUser>wende</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>c7060382-f18f-4a00-9c0d-7b1f25c1a1d2</PackageIdentityName>
+    <PackageIdentityPublisher>CN=wende</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bld\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType>
+    </RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>
+    </WindowsSdkPath>
+    <LayoutDir>C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bin\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>F7FB49A5349ED10EB7E6413FCB61E6B49813F094E1C09BA2B948C43873EA1BB8</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>c7060382-f18f-4a00-9c0d-7b1f25c1a1d2_1.0.0.0_neutral__dn0cyeqyh53ce</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>c7060382-f18f-4a00-9c0d-7b1f25c1a1d2_dn0cyeqyh53ce!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>c7060382-f18f-4a00-9c0d-7b1f25c1a1d2</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=wende</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-04-12T11:18:49.591</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\index.html">
+      <PackagePath>index.html</PackagePath>
+      <Modified>2017-04-12T11:46:35.930</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\images\LockScreenLogo.scale-200.png">
+      <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
+      <Modified>2017-04-06T23:43:46.502</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\images\SplashScreen.scale-200.png">
+      <PackagePath>images\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-04-06T23:43:46.502</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\images\Square150x150Logo.scale-200.png">
+      <PackagePath>images\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-04-06T23:43:46.502</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\images\Square44x44Logo.scale-200.png">
+      <PackagePath>images\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-04-06T23:43:46.502</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\images\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-04-06T23:43:46.502</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\images\StoreLogo.png">
+      <PackagePath>images\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-04-06T23:43:46.502</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\images\Wide310x150Logo.scale-200.png">
+      <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-04-06T23:43:46.502</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\js\main.js">
+      <PackagePath>js\main.js</PackagePath>
+      <Modified>2017-04-12T11:46:35.970</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\lib\winjs-4.0.1\js\base.js">
+      <PackagePath>lib\winjs-4.0.1\js\base.js</PackagePath>
+      <Modified>2017-04-06T23:43:46.502</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\lib\winjs-4.0.1\js\ui.js">
+      <PackagePath>lib\winjs-4.0.1\js\ui.js</PackagePath>
+      <Modified>2017-04-06T23:43:46.502</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2017-04-12T11:17:14.773</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\lib\winjs-4.0.1\css\ui-light.css">
+      <PackagePath>lib\winjs-4.0.1\css\ui-light.css</PackagePath>
+      <Modified>2017-04-06T23:43:46.502</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\lib\winjs-4.0.1\css\ui-dark.css">
+      <PackagePath>lib\winjs-4.0.1\css\ui-dark.css</PackagePath>
+      <Modified>2017-04-06T23:43:46.502</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\lib\winjs-4.0.1\fonts\Symbols.ttf">
+      <PackagePath>lib\winjs-4.0.1\fonts\Symbols.ttf</PackagePath>
+      <Modified>2017-04-06T23:43:46.502</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wende\Documents\GitHub\playground\C#\HelloWorldWinJS\HelloWorldWinJS\bin\Debug\ReverseMap\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-04-12T11:18:49.420</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
