@@ -14,7 +14,7 @@ namespace Banco
     {
         private Conta conta;
         private int Numero = 0;
-
+        private List<Conta> contas;
         public Form1()
         {
             InitializeComponent();
@@ -52,8 +52,14 @@ namespace Banco
             } else if (tipoDeConta.Text.Equals("Corrente")) {
                 Cliente novoCliente = new Cliente(clienteNome.Text, clienteCPF.Text, clienteRG.Text, dataDeNascimento.Text);
                 conta = new Corrente();
+                contas = new List<Conta>();
+                contas.Add(conta);
                 conta.Titular = Convert.ToString(clienteNome.Text);
-                this.conta.Numero = Numero++;
+                foreach (var c in contas) {
+                    if (c.GetType().Equals("Corrente")) {
+                        this.conta.Numero = contas.Count;
+                    } 
+                }
                 titular.Text = novoCliente.Nome;
                 numeroConta.Text = Convert.ToString(this.conta.Numero);
                 saldo.Text = Convert.ToString(this.conta.Saldo);
@@ -61,7 +67,13 @@ namespace Banco
                 Cliente novoCliente = new Cliente(clienteNome.Text, clienteCPF.Text, clienteRG.Text, dataDeNascimento.Text);
                 conta = new Poupanca();
                 conta.Titular = Convert.ToString(clienteNome.Text);
-                this.conta.Numero = Numero++;
+                contas = new List<Conta>();
+                contas.Add(conta);
+                foreach (var c in contas) {
+                    if(c.GetType().Equals("Poupanca")) {
+                        this.conta.Numero = contas.Count;
+                    }
+                }
                 titular.Text = novoCliente.Nome;
                 numeroConta.Text = Convert.ToString(this.conta.Numero);
                 saldo.Text = Convert.ToString(this.conta.Saldo);
