@@ -11,26 +11,28 @@ namespace Banco
 
         public int Numero { get; set; }
         public double Saldo { get; private set; }
-        public Cliente Titular { get; internal set; }
+        public String Titular { get; set; }
 
-        public void Deposita(double valorOperacao)
+        public virtual void Deposita(double valorOperacao)
         {
             if(valorOperacao <= 0)
             {
                 MessageBox.Show("Erro: Quantia inválida!");
             } else {
                 this.Saldo += valorOperacao;
-                MessageBox.Show("Sucesso");
+                MessageBox.Show("Sucesso! Você depositou R$" + Convert.ToString(valorOperacao)+ ".\n"
+                    + "Saldo disponível: R$" + Convert.ToString(this.Saldo)+ ".");
             }
         }
 
-        public void Saca(double valorOperacao)
+        public virtual void Saca(double valorOperacao)
         {
-            if(valorOperacao <= Saldo) {
-                this.Saldo -= valorOperacao;
-                MessageBox.Show("Sucesso");
-            } else {
+            if(valorOperacao <= 0) {
                 MessageBox.Show("Erro: Saldo inválido!");
+            } else {
+                this.Saldo -= valorOperacao;
+                MessageBox.Show("Sucesso! Você sacou R$" + Convert.ToString(valorOperacao) + ".\n"
+                    + "Saldo disponível: R$" + Convert.ToString(this.Saldo) + ".");
             }
         }
     }

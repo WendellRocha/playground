@@ -73,6 +73,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Corrente.cs" />
+    <Compile Include="Poupanca.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Conta.cs" />
     <Compile Include="Form1.cs">
