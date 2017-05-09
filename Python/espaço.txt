@@ -1,6 +1,0 @@
-Sist. Arq.      Tam. Usado Disp. Uso% Montado em
-rootfs          425G  325G  101G  77% /
-tmpfs           425G  325G  101G  77% /run
-none            425G  325G  101G  77% /run/lock
-none            425G  325G  101G  77% /run/shm
-none            425G  325G  101G  77% /run/user

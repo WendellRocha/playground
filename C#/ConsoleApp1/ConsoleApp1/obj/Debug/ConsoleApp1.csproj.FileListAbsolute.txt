@@ -1,6 +1,0 @@
-C:\Users\wende\Documents\GitHub\playground\C#\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
-C:\Users\wende\Documents\GitHub\playground\C#\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
-C:\Users\wende\Documents\GitHub\playground\C#\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
-C:\Users\wende\Documents\GitHub\playground\C#\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
-C:\Users\wende\Documents\GitHub\playground\C#\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
-C:\Users\wende\Documents\GitHub\playground\C#\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
