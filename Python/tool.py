@@ -3,8 +3,7 @@ import sys
 def usage():
 	print "\nUsage: tool.py [file] [search key]\n"
 	
-
-def main():
+def run():
 	if len(sys.argv[1:]) == 0:
 		usage()
 	try:
@@ -22,8 +21,4 @@ def main():
 	except:
 		print "File not exists"
 
-def get_lines(fp):
-	fl = open(fp, "r+")
-	
-
-main()
+run()
